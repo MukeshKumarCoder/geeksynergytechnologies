@@ -14,7 +14,7 @@ const Movies = () => {
 
   const getMoviesData = async () => {
     try {
-      let res = await axios.post("https://hoblist.com/api/movieList", obj);
+      let res = await axios.post("https://geeksenery-backend-pfsv.onrender.com/api/movieList", obj);
       setMoviesData(res.data.result);
       console.log(res.data.result);
     } catch (error) {
