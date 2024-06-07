@@ -3,11 +3,12 @@ import styles from "./Login.module.css";
 import Button from "../../Components/Button/Button";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({setIsLogin}) => {
   const [formData, setFormData] = useState({
     name: "",
     password: "",
   });
+
 
   const navigate = useNavigate();
 
@@ -27,6 +28,7 @@ const Login = () => {
       formData.password === loggedUser.password
     ) {
       localStorage.setItem("LoggedIn", true)
+      setIsLogin(true)
       navigate("/movies");
     } else {
       alert("Invalid Credentials");

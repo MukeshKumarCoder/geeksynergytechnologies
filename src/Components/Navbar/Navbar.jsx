@@ -4,7 +4,7 @@ import CompanyInfo from "../CompanyInfo/CompanyInfo";
 import Button from "../Button/Button"
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({isLogin}) => {
   const navigate = useNavigate()
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
 
@@ -17,6 +17,8 @@ const Navbar = () => {
         <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", gap: "1rem"}}>
         <Button title="SignUp" onclickBtn={()=> navigate("/")} />
         <Button title="Login" onclickBtn={()=> navigate("/login")} />
+        {isLogin ? <Button title="DashBord" onclickBtn={()=> navigate("/movies")} />:<Button title="DashBoard" onclickBtn={()=> navigate("/login")} /> }
+       
         
         <button
           onClick={() => setShowCompanyInfo(!showCompanyInfo)}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./Movies.module.css"
 
-const Movies = () => {
+const Movies = ({isLogin}) => {
   const [moviesData, setMoviesData] = useState([]);
 
   let obj = {
