@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = ({setIsLogin}) => {
   const [formData, setFormData] = useState({
-    name: "",
+    email: "",
     password: "",
   });
 
@@ -24,7 +24,7 @@ const Login = ({setIsLogin}) => {
     e.preventDefault();
     const loggedUser = JSON.parse(localStorage.getItem("User"));
     if (
-      formData.name === loggedUser.name &&
+      formData.email === loggedUser.email &&
       formData.password === loggedUser.password
     ) {
       localStorage.setItem("LoggedIn", true)
@@ -41,14 +41,14 @@ const Login = ({setIsLogin}) => {
         <h2>Login</h2>
         <form onSubmit={loginHandler}>
           <div>
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="email">Email:</label>
             <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Type your name"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Type your email"
               required
-              value={formData.name}
+              value={formData.email}
               onChange={changeHandler}
             />
           </div>
@@ -60,7 +60,7 @@ const Login = ({setIsLogin}) => {
               name="password"
               placeholder="Type your password"
               required
-              value={formData.email}
+              value={formData.password}
               onChange={changeHandler}
             />
           </div>
