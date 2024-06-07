@@ -1,0 +1,25 @@
+.copmanyInfoContainer{
+    position: relative;
+}
+.companyInfo{
+    border: 2px solid aqua;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #b4fafa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    right: 5%;
+    top: 2rem;
+}
+
+.companyInfo > p> span, .companyInfo > a > span{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.companyInfo > a{
+    text-decoration: none;
+}

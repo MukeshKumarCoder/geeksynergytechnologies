@@ -1,0 +1,40 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid aqua;
+    width: 350px;
+    margin: 3rem auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    background-color: #b4fafa;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+form>div>label {
+    font-weight: 800;
+    display: block;
+}
+
+form>div>input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #b4fafa;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+form>div>input::placeholder {
+    opacity: 0.5;
+}
